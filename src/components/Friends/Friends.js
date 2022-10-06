@@ -1,17 +1,17 @@
 //Import PropTypes ↓
 import PropTypes from "prop-types";
 //Imporst CSS file with styles of component(Friends) ↓
-import "./Friends.css";
+import styles from "./Friends.module.css";
 //Code of element ↓
 export default function Friends({ avatar, name, isOnline }) {
   return (
-    <li className="item">
+    <li className={styles.item}>
       <span
-        className="status"
+        className={styles.status}
         style={{ background: isOnline ? "#44b14b" : "#fe5052" }}
       ></span>
-      <img className="avatar" src={avatar} alt="User avatar" width="48" />
-      <p className="name">{name}</p>
+      <img className={styles.avatar} src={avatar} alt="User avatar" width="48" />
+      <p className={styles.name}>{name}</p>
     </li>
   );
 }

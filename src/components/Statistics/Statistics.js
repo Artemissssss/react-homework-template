@@ -1,7 +1,7 @@
 //Import PropTypes ↓
 import PropTypes from "prop-types";
 //Imporst CSS file with styles of component(Statistics) ↓
-import "./Statistics.css";
+import styles from "./Statistics.module.css";
 //Code of element ↓
 export default function Statistics({ title, stats }) {
   function widthOfItem(i) {
@@ -13,7 +13,7 @@ export default function Statistics({ title, stats }) {
   }
   return (
     <section
-      className="statistics"
+      className={styles.statistics}
       style={{
         height:
           stats.length > 5
@@ -21,9 +21,9 @@ export default function Statistics({ title, stats }) {
             : "175px",
       }}
     >
-      <h2 className="title">{title}</h2>
+      <h2 className={styles.title}>{title}</h2>
       <ul
-        className="stat-list"
+        className={styles.statList}
         style={{
           height:
             stats.length > 5
@@ -39,15 +39,15 @@ export default function Statistics({ title, stats }) {
           )})`;
           return (
             <li
-              className="item"
+              className={styles.item}
               key={stats.id}
               style={{
                 backgroundColor: true ? backColor : backColor,
                 width: widthOfItem(i),
               }}
             >
-              <span className="label">{stats.label}</span>
-              <span className="percentage">{stats.percentage}%</span>
+              <span className={styles.label}>{stats.label}</span>
+              <span className={styles.percentage}>{stats.percentage}%</span>
             </li>
           );
         })}

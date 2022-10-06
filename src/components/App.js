@@ -8,6 +8,9 @@ import Profile from "./Profile/Profile.js";
 import Statistics from "./Statistics/Statistics.js";
 import FriendsList from "./Friends/Friends.js";
 import TransactionHistory from "./TransactionHistory/TransactionHistory.js";
+//Import styles ↓
+import friendsListCSS from "./Friends/Friends.module.css";
+import transactionHistoryCSS from "./TransactionHistory/TransactionHistory.module.css";
 //Code for render ↓
 const container = (
   <main>
@@ -21,7 +24,7 @@ const container = (
 
     <Statistics title="Upload stats" stats={data} />
 
-    <ul className="friend-list">
+    <ul className={friendsListCSS.friendList}>
       {friends.map((friends) => {
         return (
           <FriendsList
@@ -33,7 +36,7 @@ const container = (
         );
       })}
     </ul>
-    <table className="transaction-history">
+    <table className={transactionHistoryCSS.transactionHistory}>
       <thead>
         <tr>
           <th>Type</th>

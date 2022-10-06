@@ -2,7 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 //Import style.css
-import "./style.css";
+import "./style.module.css";
 //Import App ↓
 import App from "./components/App.js";
 const containerApp = <App />;

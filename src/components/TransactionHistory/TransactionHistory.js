@@ -1,7 +1,7 @@
 //Import PropTypes ↓
 import PropTypes from "prop-types";
 //Imporst CSS file with styles of component(TransactionHistory) ↓
-import "./TransactionHistory.css";
+import "./TransactionHistory.module.css";
 //Code of element ↓
 export default function TransactionHistory({ type, amount, currency }) {
   return (
